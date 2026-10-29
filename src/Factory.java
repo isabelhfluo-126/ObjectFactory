@@ -11,6 +11,8 @@ public class Factory {
     public Donuts donutOrder2;
     //todo: make a new donut called donuts order 2
     //only do he monopoly box creation.
+    public int randomNumber;
+    public int randomNumber2;
 
     //class -> blueprints
     //object -> is the house
@@ -29,22 +31,25 @@ public class Factory {
         System.out.println(yearFounded);
         System.out.println("it is " + isOpen + " that the factory is open");
 
+        randomNumber = (int)(Math.random() * 100) +1; // i-100
         //make an object of type Donuts
-        donutOrder1 = new Donuts();
+        donutOrder1 = new Donuts(randomNumber);
         donutOrder1.numberOfDonuts= donutOrder1.numberOfDonuts + 1;
         System.out.println("the amount of donuts are " + donutOrder1.numberOfDonuts);
         System.out.println("it is " + donutOrder1.hasFilling + " that the donut has filling");
         System.out.println("the type of filling is " + donutOrder1.frostingType);
 
-        donutOrder2 = new Donuts();
+        //todo: make the 2nd order have a range of 1-45 using random
+        randomNumber2 = (int)(Math.random()*45)+1;
+        donutOrder2 = new Donuts(randomNumber2);
         //todo: sout the donutsOrder 2 instance vars
         //bonus: give the variables context
-        donutOrder2.numberOfDonuts = donutOrder1.numberOfDonuts * 2;
+//        donutOrder2.numberOfDonuts = donutOrder1.numberOfDonuts * 2;
         System.out.println("the amount of donuts in this order are " + donutOrder2.numberOfDonuts);
         System.out.println("it is " + donutOrder2.hasFilling + " that the this donut order has filling");
         System.out.println("the type of filling is " + donutOrder2.frostingType);
 
-
+        donutOrder2.printInfo();
 
 
 

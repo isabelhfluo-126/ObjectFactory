@@ -14,13 +14,22 @@ public class Donuts {
     //method
     //don't say void
     //has to match exactly the name of class
-    public Donuts(){
+    public Donuts(int pNumberOfDonuts){
         frostingType = "boston Creme";
         hasFilling = true;
-        numberOfDonuts = 3;
+        numberOfDonuts = pNumberOfDonuts;
+    }//end of donut constructor
+
+    //todo:make a method called printInfo
+    public void printInfo(){
+        //a sout is System.out.println. the exam would require context
+        //todo:use souts to print the instance variables
+        System.out.println("the frosting type is " + frostingType);
+        System.out.println("it is " + hasFilling + " that the donut has filling");
+        System.out.println("there are " + numberOfDonuts + " donuts");
+
     }
 
 
 
-
-}
+}//end of donuts class
